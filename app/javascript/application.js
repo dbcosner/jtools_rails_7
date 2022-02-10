@@ -21,4 +21,4 @@ let popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 //   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 //     return new bootstrap.Tooltip(tooltipTriggerEl)
 //   })
-// });
+// });import * as bootstrap from "bootstrap"

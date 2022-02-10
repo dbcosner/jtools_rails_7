@@ -23,6 +23,9 @@ gem 've', '~> 0.0.0', '>= 0.0.4'
 # Convert between hiragana, katakana, and romaji
 gem 'mojinizer', '~> 0.2'
 
+# Add Bootstrap 5 support. View more: https://www.youtube.com/watch?v=phOUsR0dm5s
+gem 'cssbundling-rails'
+
 group :development, :test do
   gem 'awesome_print'
   gem 'pry-byebug', '~> 3.9.0'
