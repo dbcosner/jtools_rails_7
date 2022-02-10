@@ -269,7 +269,7 @@ DEPENDENCIES
   selenium-webdriver
   sprockets-rails
   stimulus-rails
-  turbo-rails
+  turbo-rails (~> 1.0.0)
   tzinfo-data
   ve (~> 0.0.0, >= 0.0.4)
   webdrivers
