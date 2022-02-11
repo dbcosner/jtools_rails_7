@@ -1,1 +1,12 @@
 @import 'bootstrap/scss/bootstrap';
+
+@font-face {
+  font-family: 'NotoSansJP-Regular';
+  src: url('NotoSansJP-Regular.otf');
+  font-family: 'NotoSansJP-Thin';
+  src: url('NotoSansJP-Thin.otf');
+}
+
+body {
+  font-family: 'NotoSansJP-Regular';
+}
