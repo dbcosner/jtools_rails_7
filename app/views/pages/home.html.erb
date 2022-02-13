@@ -1,5 +1,13 @@
 <div class="container">
   <div class="row">
-    <h2>これはテストです：<ruby>東<rp>(</rp><rt>ひがし</rt><rp>)</rp>池袋<rp>(</rp><rt>いけぶくろ</rt><rp>)</rp>駅<rp>(</rp><rt>えき</rt><rp>)</rp></h2> 
+    <%= form_with url: corpus_search_url, method: :get do |form| %>
+      <div class="mb-3">
+        <%= form.label :term, 'Search term:', class: 'form-label' %>
+        <%= form.text_field :term, class: 'form-control' %>
+      </div>
+      <div class="mb-3">
+        <%= form.submit 'Search', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
   </div>
 </div>

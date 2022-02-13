@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get 'index', to: 'pages#home'
 
   get 'appearance_testing', to: 'pages#appearance_testing'
+
+  get 'corpus_search', to: 'corpus/examples#search', as: 'corpus_search'
 end
