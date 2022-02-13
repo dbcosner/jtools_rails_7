@@ -15,15 +15,21 @@ class Corpus::PopulateCorpus
   def populate_from_corpus(corpus_file_path)
     # Attempt to populate from each line. Fail quietly and continue to the next line
     # if one of the lines cannot be persisted :
-    print 'Reticulating splines.' if Rails.env.development?
-    count = 0
+    is_dev = Rails.env.develpment?
+    if is_dev
+      print 'Reticulating splines.' 
+      count = 0
+    end
+
     File.readlines(corpus_file_path).each do |line|
       begin
         formatted_line = Corpus::ParseText.(line)
         Corpus::Example.create!(words: formatted_line)
 
-        count +=1
-        print '.' if (count % 100 == 0) && Rails.env.development?
+        if is_dev
+          count +=1
+          print '.' if (count % 100 == 0)
+        end
       rescue Exception => e
         @error_logger.info("#{e}\n")
       end
